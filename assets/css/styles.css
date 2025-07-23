@@ -3,7 +3,15 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
 
+/* General Styles */
+body {
+    min-height: 100vh; /* 100% viewport height to stretch body larger than the height of the screen when there is enough content on the page that the user needs to scroll */
+    display: flex;
+    flex-direction: column; /* column makes elements display underneath each other */
+    /* Generic project styles */
+    color: #3a3a3a;
 }
 
 /* Header */
@@ -14,6 +22,8 @@ header {
 /* Main */
 main {
     background-color: lightblue;
+    /* make main element take up any surplus space to push footer down */
+    flex: 1 0 auto;
 }
 
 /* Footer */
