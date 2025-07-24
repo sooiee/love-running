@@ -26,6 +26,9 @@ header {
     z-index: 99;
     width: 100%; /* this is needed because the fixed position causes the header to only take up the width of the content not entire width */
     box-shadow: 0 2px 2px #3a3a3a; /* horizontal offset, vertical offset, blur, color */
+    display: flex; /* makes love running logo and checkbox show in a side by side as flex direction default is row */
+    justify-content: space-between; /* adds space between love running and checkbox */
+    align-items: baseline; /* to align vertically */
 }
 
 header a {
@@ -62,15 +65,28 @@ nav {
     padding: 0 1rem;
     box-shadow: 0 2px 2px #3a3a3a;
     display: none;
-    
+    top: 100%; /* tells the top of the nav element to start at the bottom of its parent element (header) ~ both are flex so nav follows header */   
 }
 
+/* Nav toggle */
+#nav-toggle:checked~nav { /* using a pseudo class to say when #nav-toggle is checked (its id for checkbox) target the adjoining nav element (tilde tells css to target the sibling element (nav in this case) */
+    display: block;
+}
+
+#nav-toggle {
+    display: none; /* checkbox no longer displays */
+}
+
+.nav-toggle-label {
+    font-size: 2rem;
+}
 
 /* Main content*/
 main {
     background-color: lightblue;
     /* make main element take up any surplus space to push footer down */
     flex: 1 0 auto;
+    margin-top: 47px; /* via dev tools saw that the header was 47px and was covering the main section, so margin top pushes the content down, starting main 47px from the top */
 }
 
 /* Footer */
