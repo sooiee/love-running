@@ -20,7 +20,12 @@ body {
 
 /* Header */
 header { 
-    background-color: lightcoral;
+    background-color: #ffffff;
+    padding: 0 1rem;
+    position: fixed;
+    z-index: 99;
+    width: 100%; /* this is needed because the fixed position causes the header to only take up the width of the content not entire width */
+    box-shadow: 0 2px 2px #3a3a3a; /* horizontal offset, vertical offset, blur, color */
 }
 
 h1 {
