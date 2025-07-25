@@ -1,14 +1,14 @@
-/* Google fonts import */
+/* GOOGLE FONT IMPORTS*/
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap');
 
-/* Asterisk wildcard selector to override default styles added by the browser */
+/* ASTERISK WILDCARD SELECTOR to override default styles added by the browser */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-/* General Styles */
+/* GENERAL STYLES */
 body {
     min-height: 100vh; /* 100% viewport height to stretch body larger than the height of the screen when there is enough content on the page that the user needs to scroll */
     display: flex;
@@ -18,7 +18,7 @@ body {
     font-family: 'lato', sans-serif;
 }
 
-/* Header */
+/* HEADER */
 header { 
     background-color: #ffffff;
     padding: 0 1rem;
@@ -56,7 +56,7 @@ h1 {
     border-bottom: 1px solid #3a3a3a;
 }
 
-/* Navbar styles with dropdown toggle */
+/* NAV BAR STYLES WITH DROPDOWN TOGGLES */
 nav {
     position: absolute;
     background-color: #ffffff;
@@ -68,7 +68,7 @@ nav {
     top: 100%; /* tells the top of the nav element to start at the bottom of its parent element (header) ~ both are flex so nav follows header */   
 }
 
-/* Nav toggle */
+/* NAV TOGGLE */
 #nav-toggle:checked~nav { /* using a pseudo class to say when #nav-toggle is checked (its id for checkbox) target the adjoining nav element (tilde tells css to target the sibling element (nav in this case) */
     display: block;
 }
@@ -81,7 +81,7 @@ nav {
     font-size: 2rem;
 }
 
-/* Main content*/
+/* MAIN CONTENTS*/
 main {
     background-color: lightblue;
     /* make main element take up any surplus space to push footer down */
@@ -89,12 +89,23 @@ main {
     margin-top: 47px; /* via dev tools saw that the header was 47px and was covering the main section, so margin top pushes the content down, starting main 47px from the top */
 }
 
-/* Footer */
-footer {
-    background-color: orange;
+/* FOOTER */
+#social-networks {
+    text-align: center; /* icons are basically fonts so can align with text-align */
+    padding: 20px 0; /* padding above and below */
+    display: flex;
+    justify-content: space-evenly; /* using flexbox to evenly space icons across footer */
+    list-style-type: none; /* removes bulletpoints */
+
 }
 
-/* Media query: tablets and larger (768px and up, css written here will only apply for 768px upwards*/
+#social-networks i { /*targets the icons themselves */
+   font-size: 160%;
+   padding: 5%;
+   color: #3a3a3a;
+}
+
+/* MEDIA QUERY: tablets and larger (768px and up, css written here will only apply for 768px upwards*/
 @media screen and (min-width: 768px) {
     /* header */
     nav {
@@ -122,13 +133,13 @@ footer {
         margin: 0 0.5rem; 
     }
 
-    /* main content */
+    /* MAIN CONTENT */
         main {
         margin-top: 79px; /* again using dev tools, header is 79px at this screen size, covering the main content so push main down 79px so its visible */
     }
  }
  
-/* Large devices (laptops and desktops, 992px and up) */
+/* MEDIA QUERY: Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
     #menu a:hover{
         border-bottom: 1px solid #3a3a3a;
