@@ -18,13 +18,12 @@ body {
    font-family: "lato", sans-serif;
 }
 
-h1, h2, h3 {
+h1,h2,h3 {
    font-family: "Oswald", sans-serif;
    text-transform: uppercase;
    letter-spacing: 2px;
    color: #252525;
 }
-
 
 /* HEADER */
 header {
@@ -100,18 +99,46 @@ main {
 }
 
 #cover-text {
-    background-color: rgba(241, 109, 107, .7); /* using rgba as its last option is to set opacit, .7 makes its semi-transparent */
-    font-size: 130%;
-    position: absolute; /* will be placed relative to the #hero section */
-    bottom: 30px; /* so it shows close to the bottom of the hero image, 30px from bottom exactly */
-    width: 80%;
-    min-height: 200px;
-    padding-top: 40px; /*so text doesn't stick to top of cover-text div */
-    padding-left: 10px; /* space it from edge of screen */
+   background-color: rgba(241,109,107,0.7); /* using rgba as its last option is to set opacit, .7 makes its semi-transparent */
+   font-size: 130%;
+   position: absolute; /* will be placed relative to the #hero section */
+   bottom: 30px; /* so it shows close to the bottom of the hero image, 30px from bottom exactly */
+   width: 80%;
+   min-height: 200px;
+   padding-top: 40px; /*so text doesn't stick to top of cover-text div */
+   padding-left: 10px; /* space it from edge of screen */
 }
 
-#cover-text > h2, #cover-text > h3 { /* targets direct h2 and h3 children of #cover-text div */
-    color: #ffffff;
+#cover-text > h2, #cover-text > h3 {
+   /* targets direct h2 and h3 children of #cover-text div */
+   color: #ffffff;
+}
+
+/* REASONS SECTION */
+#reasons {
+   width: 90%;
+   margin: 20px auto;
+}
+
+#reasons h2 {
+   margin-bottom: 20px;
+   text-align: center;
+   font-size: 280%;
+}
+
+#benefits-physical > div,
+#benefits-mental > div {
+   line-height: 20px;
+   margin-bottom: 20px;
+}
+
+#benefits p {
+   padding: 0 20px;
+}
+
+#benefits hr {
+   border-top: 1px solid #3a3a3a;
+   margin: 5px 0;
 }
 
 /* FOOTER */
@@ -164,10 +191,13 @@ main {
    }
 
    /* HERO */
-   #cover-text { /* targets the love running pink div section */
-    width: 300px; /* takes up approx half width of screen */
-    right: 50px; /* moved 50px from right */
+   #cover-text {
+      /* targets the love running pink div section */
+      width: 300px; /* takes up approx half width of screen */
+      right: 50px; /* moved 50px from right */
    }
+
+   
 }
 
 /* MEDIA QUERY: Large devices (laptops and desktops, 992px and up) */
