@@ -93,3 +93,27 @@ main {
 footer {
     background-color: orange;
 }
+
+/* Media query: tablets and larger (768px and up, css written here will only apply for 768px upwards*/
+@media screen and (min-width: 768px) {
+    /* header */
+    nav {
+        display: block; /* makes sure nav bar is always displayed */
+        position: relative; /* puts it back inside the header */
+        box-shadow: none;
+        width: fit-content; /* so it doesnt take up all the space in the header, allows flex styles from earlier to push it to the right */
+        padding-right: 1rem; /* so nav menu items don't stick to right */   
+    }
+
+    #menu {
+        display: flex;
+    }
+
+    #menu > li {
+        padding-left: 1rem;
+    }
+
+    .nav-toggle-label {
+        display: none;
+    }
+}
