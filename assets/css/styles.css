@@ -160,11 +160,11 @@ main {
    max-height: 300px;
 }
 
-#benefits-image { /* to center image */
-    display: flex;
-    justify-content: center;
+#benefits-image {
+   /* to center image */
+   display: flex;
+   justify-content: center;
 }
-
 
 /* FOOTER */
 #social-networks {
@@ -182,9 +182,10 @@ main {
    color: #3a3a3a;
 }
 
-/* MEDIA QUERY: tablets and larger (768px and up, css written here will only apply for 768px upwards*/
+/* --------------------------------------------------------------------------- */
+/* MEDIA QUERY 1: tablets and larger (768px and up, css written here will only apply for 768px upwards*/
 @media screen and (min-width: 768px) {
-   /* header */
+   /* MEDIA Q1 HEADER */
    nav {
       display: block; /* makes sure nav bar is always displayed */
       position: relative; /* puts it back inside the header */
@@ -210,22 +211,70 @@ main {
       margin: 0 0.5rem;
    }
 
-   /* MAIN CONTENT */
+   /* MEDIA Q1 MAIN CONTENT */
    main {
       margin-top: 79px; /* again using dev tools, header is 79px at this screen size, covering the main content so push main down 79px so its visible */
    }
 
-   /* HERO */
+   /* MEDIA Q1 HERO */
    #cover-text {
       /* targets the love running pink div section */
       width: 300px; /* takes up approx half width of screen */
       right: 50px; /* moved 50px from right */
    }
+
+   /* MEDIA Q1 REASONS SECTION */
+   #benefits-physical,
+   #benefits-mental {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+   }
+
+   #benefits-physical > div,
+   #benefits-mental > div {
+      width: 75%;
+   }
+
+   #benefits-mental > div {
+      text-align: end; /* aligns text in div only */
+      align-self: flex-end; /* this aligns the divs themselves */
+   }
 }
 
-/* MEDIA QUERY: Large devices (laptops and desktops, 992px and up) */
+/* MEDIA QUERY 2: Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
+   /* MEDIA Q2 HEADER */
    #menu a:hover {
       border-bottom: 1px solid #3a3a3a;
+   }
+}
+
+/* MEDIA QUERY 3: Larger devices for screens 1200px and wider */
+@media screen and (min-width: 1200px) {
+   /* MEDIA Q3 REASONS SECTION */
+   #benefits {
+      display: flex;
+      flex-direction: row;
+   }
+
+   #benefits > div {
+      flex: 1; /* flex grow on */
+   }
+
+   #benefits-image {
+      order: 0;
+   }
+
+   #benefits-mental {
+      order: 1;
+   }
+
+   #benefits-mental > div {
+      align-self: flex-start; /* this aligns the divs themselves */
+   }
+
+   #benefits-physical > div {
+      align-self: flex-end;
    }
 }
