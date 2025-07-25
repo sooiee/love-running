@@ -18,7 +18,9 @@ body {
    font-family: "lato", sans-serif;
 }
 
-h1,h2,h3 {
+h1,
+h2,
+h3 {
    font-family: "Oswald", sans-serif;
    text-transform: uppercase;
    letter-spacing: 2px;
@@ -99,7 +101,12 @@ main {
 }
 
 #cover-text {
-   background-color: rgba(241,109,107,0.7); /* using rgba as its last option is to set opacit, .7 makes its semi-transparent */
+   background-color: rgba(
+      241,
+      109,
+      107,
+      0.7
+   ); /* using rgba as its last option is to set opacit, .7 makes its semi-transparent */
    font-size: 130%;
    position: absolute; /* will be placed relative to the #hero section */
    bottom: 30px; /* so it shows close to the bottom of the hero image, 30px from bottom exactly */
@@ -109,7 +116,8 @@ main {
    padding-left: 10px; /* space it from edge of screen */
 }
 
-#cover-text > h2, #cover-text > h3 {
+#cover-text > h2,
+#cover-text > h3 {
    /* targets direct h2 and h3 children of #cover-text div */
    color: #ffffff;
 }
@@ -140,6 +148,23 @@ main {
    border-top: 1px solid #3a3a3a;
    margin: 5px 0;
 }
+
+/* CIRCLE RUNNING IMAGE */
+#circle-cover-bg {
+   background: url("../images/reasons-image.webp") no-repeat top center/cover; /* image won't repeat, top horizontal, center vertically/automatic sizing to cover hero section w/o distorting */
+   height: 90vw; /* height and width equal to make square and in turn a cricle */
+   width: 90vw;
+   margin-bottom: 20px;
+   border-radius: 50%; /* makes image into circle */
+   max-width: 300px; /* so image doesn't take up too much space on larger phones/landscape mode */
+   max-height: 300px;
+}
+
+#benefits-image { /* to center image */
+    display: flex;
+    justify-content: center;
+}
+
 
 /* FOOTER */
 #social-networks {
@@ -196,8 +221,6 @@ main {
       width: 300px; /* takes up approx half width of screen */
       right: 50px; /* moved 50px from right */
    }
-
-   
 }
 
 /* MEDIA QUERY: Large devices (laptops and desktops, 992px and up) */
