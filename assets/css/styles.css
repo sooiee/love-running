@@ -1,105 +1,112 @@
 /* GOOGLE FONT IMPORTS*/
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap");
 
 /* ASTERISK WILDCARD SELECTOR to override default styles added by the browser */
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
 }
 
 /* GENERAL STYLES */
 body {
-    min-height: 100vh; /* 100% viewport height to stretch body larger than the height of the screen when there is enough content on the page that the user needs to scroll */
-    display: flex;
-    flex-direction: column; /* column makes elements display underneath each other */
-    /* Generic project styles */
-    color: #3a3a3a;
-    font-family: 'lato', sans-serif;
+   min-height: 100vh; /* 100% viewport height to stretch body larger than the height of the screen when there is enough content on the page that the user needs to scroll */
+   display: flex;
+   flex-direction: column; /* column makes elements display underneath each other */
+   /* Generic project styles */
+   color: #3a3a3a;
+   font-family: "lato", sans-serif;
 }
 
 /* HEADER */
-header { 
-    background-color: #ffffff;
-    padding: 0 1rem;
-    position: fixed;
-    z-index: 99;
-    width: 100%; /* this is needed because the fixed position causes the header to only take up the width of the content not entire width */
-    box-shadow: 0 2px 2px #3a3a3a; /* horizontal offset, vertical offset, blur, color */
-    display: flex; /* makes love running logo and checkbox show in a side by side as flex direction default is row */
-    justify-content: space-between; /* adds space between love running and checkbox */
-    align-items: baseline; /* to align vertically */
+header {
+   background-color: #ffffff;
+   padding: 0 1rem;
+   position: fixed;
+   z-index: 99;
+   width: 100%; /* this is needed because the fixed position causes the header to only take up the width of the content not entire width */
+   box-shadow: 0 2px 2px #3a3a3a; /* horizontal offset, vertical offset, blur, color */
+   display: flex; /* makes love running logo and checkbox show in a side by side as flex direction default is row */
+   justify-content: space-between; /* adds space between love running and checkbox */
+   align-items: baseline; /* to align vertically */
 }
 
 header a {
-    text-decoration: none; /*removes default styling for anchor (underline and blue color) */
-    color: inherit; /* inherits text color from body */
+   text-decoration: none; /*removes default styling for anchor (underline and blue color) */
+   color: inherit; /* inherits text color from body */
 }
 h1 {
-    font-family: 'Oswald', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #252525;
+   font-family: "Oswald", sans-serif;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+   color: #252525;
 }
 
 #menu {
-    font-size: 110%;
-    letter-spacing: 4px;
-    list-style-type: none; /* removes bulletpoints */
+   font-size: 110%;
+   letter-spacing: 4px;
+   list-style-type: none; /* removes bulletpoints */
 }
 
 #menu > li {
-    margin-bottom: 1em;
+   margin-bottom: 1em;
 }
 
 .active {
-    border-bottom: 1px solid #3a3a3a;
+   border-bottom: 1px solid #3a3a3a;
 }
 
 /* NAV BAR STYLES WITH DROPDOWN TOGGLES */
 nav {
-    position: absolute;
-    background-color: #ffffff;
-    width: 100%;
-    left: 0;
-    padding: 0 1rem;
-    box-shadow: 0 2px 2px #3a3a3a;
-    display: none;
-    top: 100%; /* tells the top of the nav element to start at the bottom of its parent element (header) ~ both are flex so nav follows header */   
+   position: absolute;
+   background-color: #ffffff;
+   width: 100%;
+   left: 0;
+   padding: 0 1rem;
+   box-shadow: 0 2px 2px #3a3a3a;
+   display: none;
+   top: 100%; /* tells the top of the nav element to start at the bottom of its parent element (header) ~ both are flex so nav follows header */
 }
 
 /* NAV TOGGLE */
-#nav-toggle:checked~nav { /* using a pseudo class to say when #nav-toggle is checked (its id for checkbox) target the adjoining nav element (tilde tells css to target the sibling element (nav in this case) */
-    display: block;
+#nav-toggle:checked ~ nav {
+   /* using a pseudo class to say when #nav-toggle is checked (its id for checkbox) target the adjoining nav element (tilde tells css to target the sibling element (nav in this case) */
+   display: block;
 }
 
 #nav-toggle {
-    display: none; /* checkbox no longer displays */
+   display: none; /* checkbox no longer displays */
 }
 
 .nav-toggle-label {
-    font-size: 2rem;
+   font-size: 2rem;
 }
 
 /* MAIN CONTENTS*/
 main {
-    background-color: lightblue;
-    /* make main element take up any surplus space to push footer down */
-    flex: 1 0 auto;
-    margin-top: 47px; /* via dev tools saw that the header was 47px and was covering the main section, so margin top pushes the content down, starting main 47px from the top */
+   /* make main element take up any surplus space to push footer down */
+   flex: 1 0 auto;
+   margin-top: 47px; /* via dev tools saw that the header was 47px and was covering the main section, so margin top pushes the content down, starting main 47px from the top */
+}
+
+/* HERO SECTION */
+#hero {
+   height: 600px;
+   width: 100%;
+   background: url("../images/hero-image.webp") no-repeat center center/cover; /* image won't repeat, center hoirzontal, center vertically/automatic sizing to cover hero section w/o distorting */
 }
 
 /* FOOTER */
 #social-networks {
-    text-align: center; /* icons are basically fonts so can align with text-align */
-    padding: 20px 0; /* padding above and below */
-    display: flex;
-    justify-content: space-evenly; /* using flexbox to evenly space icons across footer */
-    list-style-type: none; /* removes bulletpoints */
-
+   text-align: center; /* icons are basically fonts so can align with text-align */
+   padding: 20px 0; /* padding above and below */
+   display: flex;
+   justify-content: space-evenly; /* using flexbox to evenly space icons across footer */
+   list-style-type: none; /* removes bulletpoints */
 }
 
-#social-networks i { /*targets the icons themselves */
+#social-networks i {
+   /*targets the icons themselves */
    font-size: 160%;
    padding: 5%;
    color: #3a3a3a;
@@ -107,41 +114,41 @@ main {
 
 /* MEDIA QUERY: tablets and larger (768px and up, css written here will only apply for 768px upwards*/
 @media screen and (min-width: 768px) {
-    /* header */
-    nav {
-        display: block; /* makes sure nav bar is always displayed */
-        position: relative; /* puts it back inside the header */
-        box-shadow: none;
-        width: fit-content; /* so it doesnt take up all the space in the header, allows flex styles from earlier to push it to the right */
-        padding-right: 1rem; /* so nav menu items don't stick to right */   
-    }
+   /* header */
+   nav {
+      display: block; /* makes sure nav bar is always displayed */
+      position: relative; /* puts it back inside the header */
+      box-shadow: none;
+      width: fit-content; /* so it doesnt take up all the space in the header, allows flex styles from earlier to push it to the right */
+      padding-right: 1rem; /* so nav menu items don't stick to right */
+   }
 
-    #menu {
-        display: flex;
-    }
+   #menu {
+      display: flex;
+   }
 
-    #menu > li {
-        padding-left: 1rem;
-    }
+   #menu > li {
+      padding-left: 1rem;
+   }
 
-    .nav-toggle-label {
-        display: none;
-    }
-    #logo {
-        font-size: 280%;
-        line-height: 75px; /* gives it more space at the top */
-        margin: 0 0.5rem; 
-    }
+   .nav-toggle-label {
+      display: none;
+   }
+   #logo {
+      font-size: 280%;
+      line-height: 75px; /* gives it more space at the top */
+      margin: 0 0.5rem;
+   }
 
-    /* MAIN CONTENT */
-        main {
-        margin-top: 79px; /* again using dev tools, header is 79px at this screen size, covering the main content so push main down 79px so its visible */
-    }
- }
- 
+   /* MAIN CONTENT */
+   main {
+      margin-top: 79px; /* again using dev tools, header is 79px at this screen size, covering the main content so push main down 79px so its visible */
+   }
+}
+
 /* MEDIA QUERY: Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
-    #menu a:hover{
-        border-bottom: 1px solid #3a3a3a;
-    }
- }
+   #menu a:hover {
+      border-bottom: 1px solid #3a3a3a;
+   }
+}
