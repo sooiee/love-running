@@ -116,4 +116,14 @@ footer {
     .nav-toggle-label {
         display: none;
     }
-}
+    #logo {
+        font-size: 280%;
+        line-height: 75px; /* gives it more space at the top */
+        margin: 0 0.5rem; 
+    }
+
+    /* main content */
+        main {
+        margin-top: 79px; /* again using dev tools, header is 79px at this screen size, covering the main content so push main down 79px so its visible */
+    }
+ }
