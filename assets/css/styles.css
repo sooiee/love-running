@@ -192,6 +192,15 @@ main {
    color: #fafafa;
 }
 
+/* GALLERY PAGE */
+#photos img {
+   width: 100%; /* images not fit the screen with no overflow */
+   line-height: 1em; /*so alt text isnt covered if image doesnt display due to 0 line-height in #photos styles */
+}
+
+#photos {
+   line-height: 0; /* removes white space between the photos, images are inline elements and treated like text, which has automatic line height to vertically space outline, this is what is causing the whitespace */
+}
 /* FOOTER */
 #social-networks {
    text-align: center; /* icons are basically fonts so can align with text-align */
