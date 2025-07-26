@@ -103,12 +103,7 @@ main {
 }
 
 #cover-text {
-   background-color: rgba(
-      241,
-      109,
-      107,
-      0.7
-   ); /* using rgba as its last option is to set opacit, .7 makes its semi-transparent */
+   background-color: rgba(241,109,107,0.7); /* using rgba as its last option is to set opacit, .7 makes its semi-transparent */
    font-size: 130%;
    position: absolute; /* will be placed relative to the #hero section */
    bottom: 30px; /* so it shows close to the bottom of the hero image, 30px from bottom exactly */
@@ -199,7 +194,7 @@ main {
 }
 
 #photos {
-   line-height: 0; /* removes white space between the photos, images are inline elements and treated like text, which has automatic line height to vertically space outline, this is what is causing the whitespace */
+   line-height: 0; /* removes white space between the photos, images are inline elements and treated like text,which has automatic line height to vertically space outline, this is what is causing the whitespace */
 }
 /* FOOTER */
 #social-networks {
@@ -218,6 +213,15 @@ main {
 }
 
 /* --------------------------------------------------------------------------- */
+/* MEDIA QUERY: large or landscape phones (576px and up) */
+@media screen and (min-width: 576px) {
+   /* GALLERY PAGE */
+   #photos { 
+      column-count: 2; /*displays content of selected element in columns (imgs in the #photos div will be displayed as columns on this phone size and up */
+      column-gap: 0; /* no gap shows between images in the column */
+   }
+}
+
 /* MEDIA QUERY 1: tablets and larger (768px and up, css written here will only apply for 768px upwards*/
 @media screen and (min-width: 768px) {
    /* MEDIA Q1 HEADER */
@@ -275,7 +279,13 @@ main {
       text-align: end; /* aligns text in div only */
       align-self: flex-end; /* this aligns the divs themselves */
    }
+
+   /* GALLERY PAGE */
+   #photos {
+      column-count: 3;
+   }
 }
+
 
 /* MEDIA QUERY 2: Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
@@ -283,6 +293,12 @@ main {
    #menu a:hover {
       border-bottom: 1px solid #3a3a3a;
    }
+
+   /* GALLERY PAGE */
+   #photos {
+      column-count: 4;
+   }
+
 }
 
 /* MEDIA QUERY 3: Larger devices for screens 1200px and wider */
